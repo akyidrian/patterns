@@ -34,7 +34,7 @@ $(TARGET): Main.o Subject.o Observer.o ConcreteSubject.o ConcreteObserver.o
 # Remove old files
 .PHONY: clean distclean
 clean:
-	$(DEL) -f *.gch *.o
+	$(DEL) *.gch *.o
 
 distclean: clean
 	$(DEL) $(TARGET)
