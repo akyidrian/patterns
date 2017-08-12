@@ -1,7 +1,9 @@
 #include "ConcreteSubject.hpp"
 
 namespace Pattern {
-    ConcreteSubject:: ConcreteSubject() {}
+    ConcreteSubject:: ConcreteSubject() {
+        subjectState = 0;
+    }
 
     int ConcreteSubject::getState() {
         return subjectState;

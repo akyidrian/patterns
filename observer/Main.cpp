@@ -5,7 +5,7 @@
 
 using namespace Pattern;
 
-bool isUpdated(std::vector<ConcreteObserver*> observers, int newState) {
+bool isConsistent(std::vector<ConcreteObserver*> observers, int newState) {
     std::vector<ConcreteObserver*>::iterator it;
     for (it = observers.begin(); it != observers.end(); ++it) {
           ConcreteObserver* o = (*it);
@@ -16,6 +16,7 @@ bool isUpdated(std::vector<ConcreteObserver*> observers, int newState) {
     return true;
 }
 
+// Basic unit testing.
 int main(int argc, char *argv[]) {
     ConcreteSubject* subject = new ConcreteSubject();
     std::vector<ConcreteObserver*> observers;
@@ -26,13 +27,13 @@ int main(int argc, char *argv[]) {
 
     int newState = 0;
     subject->setState(newState);
-    if(!isUpdated(observers, newState)) {
+    if(!isConsistent(observers, newState)) {
         std::cout << "Observer state doesn't match!" << std::endl;
     }
 
     newState = 1;
     subject->setState(newState);
-    if(!isUpdated(observers, newState)) {
+    if(!isConsistent(observers, newState)) {
         std::cout << "Observer state doesn't match!" << std::endl;
     }
 

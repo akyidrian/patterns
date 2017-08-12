@@ -12,7 +12,7 @@ namespace Pattern {
         public:
             virtual ~Observer();
 
-            virtual void update(Subject* changedSubject) = 0;
+            virtual void update() = 0;
         protected:
             Observer();
     };

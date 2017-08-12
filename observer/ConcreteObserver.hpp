@@ -10,17 +10,18 @@
 
 namespace Pattern {
     class ConcreteSubject;
-    class Subject;
 
     class ConcreteObserver : public Observer {
         public:
+            ConcreteObserver();
             ConcreteObserver(ConcreteSubject* s);
             ~ConcreteObserver();
 
-            virtual void update(Subject* changedSubject);
+            virtual void update();
+            virtual void setSubject(ConcreteSubject* newSubject);
             virtual int getState();
         private:
-            int observerState;
+            int observerState;  // Using a plain int to represent some state.
             ConcreteSubject* subject;
     };
 }

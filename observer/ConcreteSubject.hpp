@@ -18,7 +18,7 @@ namespace Pattern {
             int getState();
             void setState(int newState);
         private:
-            int subjectState;
+            int subjectState;  // Using a plain int to represent some state.
     };
 }
 

@@ -11,7 +11,7 @@ namespace Pattern {
      * "aspects", which are used at registration and notification time.
      */
     void Subject::attach(Observer* o) {
-        observers.push_back(o);
+        observers.push_back(o);  // FIXME: Doesn't prevent duplicates! 
     }
 
     void Subject::detach(Observer* o) {
@@ -26,7 +26,7 @@ namespace Pattern {
     void Subject::notify() {
         std::list<Observer*>::iterator it;
         for (it = observers.begin(); it != observers.end(); ++it) {
-              (*it)->update(this);
+              (*it)->update();
         }
     }
 }
