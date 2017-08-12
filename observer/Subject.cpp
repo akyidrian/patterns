@@ -16,8 +16,7 @@ namespace Pattern {
     void Subject::notify() {
         std::list<Observer*>::iterator it;
         for (it = observers.begin(); it != observers.end(); ++it) {
-              Observer* o = (*it);
-              o->update(this);
+              (*it)->update(this);
         }
     }
 }

@@ -11,8 +11,8 @@ namespace Pattern {
         subject->detach(this);
     }
 
-    void ConcreteObserver::update(Subject* s) {
-        if (subject == s) {
+    void ConcreteObserver::update(Subject* changedSubject) {
+        if (subject == changedSubject) {
             observerState = subject->getState();
         }
     }

@@ -7,8 +7,11 @@ namespace Pattern {
         return subjectState;
     }
 
-    void ConcreteSubject::setState(int s) {
-        subjectState = s;
+    /**
+     * Calling this method results in a notify() to occur.
+     */
+    void ConcreteSubject::setState(int newState) {
+        subjectState = newState;
         notify();
     }
 }
