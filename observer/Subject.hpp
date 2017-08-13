@@ -6,7 +6,7 @@
 #ifndef SUBJECT_H
 #define SUBJECT_H
 
-#include <list>
+#include <set>
 
 namespace Pattern {
     class Observer;
@@ -21,7 +21,7 @@ namespace Pattern {
         protected:
             Subject();
         private:
-            std::list<Observer*> observers;
+            std::set<Observer*> observers;
     };
 }
 

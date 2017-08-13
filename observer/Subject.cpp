@@ -1,5 +1,6 @@
 #include "Subject.hpp"
 #include "Observer.hpp"
+#include <set>
 
 namespace Pattern {
     Subject::Subject() {}
@@ -11,11 +12,11 @@ namespace Pattern {
      * "aspects", which are used at registration and notification time.
      */
     void Subject::attach(Observer* o) {
-        observers.push_back(o);  // FIXME: Doesn't prevent duplicates! 
+        observers.insert(o);
     }
 
     void Subject::detach(Observer* o) {
-        observers.remove(o);
+        observers.erase(o);
     }
 
     /**
@@ -24,7 +25,7 @@ namespace Pattern {
      * class may be a better option.
      */
     void Subject::notify() {
-        std::list<Observer*>::iterator it;
+        std::set<Observer*>::iterator it;
         for (it = observers.begin(); it != observers.end(); ++it) {
               (*it)->update();
         }

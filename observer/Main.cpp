@@ -8,10 +8,9 @@ using namespace Pattern;
 bool isConsistent(std::vector<ConcreteObserver*> observers, int newState) {
     std::vector<ConcreteObserver*>::iterator it;
     for (it = observers.begin(); it != observers.end(); ++it) {
-          ConcreteObserver* o = (*it);
-          if (o->getState() != newState) {
-              return false;
-          }
+        if ((*it)->getState() != newState) {
+            return false;
+        }
     }
     return true;
 }
@@ -25,19 +24,21 @@ int main(int argc, char *argv[]) {
         observers.push_back(new ConcreteObserver(subject));
     }
 
-    int newState = 0;
+    // Setting a state in the Subject and checking Observers.
+    int newState = -1;
     subject->setState(newState);
     if(!isConsistent(observers, newState)) {
-        std::cout << "Observer state doesn't match!" << std::endl;
+        std::cout << "Observers have inconsistent state!" << std::endl;
     }
 
+    // Changing state in the Subject and checking Observers.
     newState = 1;
     subject->setState(newState);
     if(!isConsistent(observers, newState)) {
-        std::cout << "Observer state doesn't match!" << std::endl;
+        std::cout << "Observers have inconsistent state!" << std::endl;
     }
 
-    std::cout << "Success" << std::endl;
+    std::cout << "Success! State is consistent!" << std::endl;
     delete subject;
     observers.clear();
 }
