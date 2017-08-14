@@ -6,9 +6,6 @@ DEBUG = -g
 CFLAGS = -Wall -c $(DEBUG)
 LFLAGS = -Wall $(DEBUG)
 
-# SRCS = Main.cpp Subject.cpp Observer.cpp ConcreteSubject.cpp ConcreteObserver.cpp
-# OBJS = $(subst .cpp, .o, $(SRCS))
-
 # Default target
 all: $(TARGET)
 
