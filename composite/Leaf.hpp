@@ -10,9 +10,6 @@ namespace Pattern {
             ~Leaf();
 
             virtual void operation();
-            virtual void add(Component* c);
-            virtual void remove(Component* c);
-            virtual void getChild(int i);
     };
 }
 

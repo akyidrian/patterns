@@ -1,11 +1,11 @@
 #include "Leaf.hpp"
+#include <iostream>
 
 namespace Pattern {
     Leaf::Leaf() {}
     Leaf::~Leaf() {}
 
-    void Leaf::operation() {}
-    void Leaf::add(Component* c) {}
-    void Leaf::remove(Component* c) {}
-    void Leaf::getChild(int i) {}
+    void Leaf::operation() {
+        std::cout << "I'm a Leaf with address:" << this << std::endl;
+    }
 }
