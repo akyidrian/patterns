@@ -1,0 +1,19 @@
+#ifndef LEAF_H
+#define LEAF_H
+
+#include "Component.hpp"
+
+namespace Pattern {
+    class Leaf : public Component {
+        public:
+            Leaf();
+            ~Leaf();
+
+            virtual void operation();
+            virtual void add(Component* c);
+            virtual void remove(Component* c);
+            virtual void getChild(int i);
+    };
+}
+
+#endif
