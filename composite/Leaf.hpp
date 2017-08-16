@@ -1,3 +1,7 @@
+/**
+ * Leaf defines behaviour for primitive objects in the composition. Leaf objects
+ * have no children.
+ */
 #ifndef LEAF_H
 #define LEAF_H
 

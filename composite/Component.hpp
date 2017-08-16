@@ -1,3 +1,11 @@
+/**
+ * Component:
+ *  -Declares an interface for objects in the composition.
+ *  -Implements default behaviour for the interface common to all classes.
+ *  -Declares an interface for accessing and managing its child components.
+ *  -(Optionally can) define an interface for accessing a component's parent in
+ *   the recursive structure, and implements it if that's appropriate.
+ */
 #ifndef COMPONENT_H
 #define COMPONENT_H
 

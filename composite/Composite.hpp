@@ -1,3 +1,7 @@
+/**
+ * Composite defines behaviour for components that can have children. It stores
+ * child components and implements child-related operations from Component.
+ */
 #ifndef COMPOSITE_H
 #define COMPOSITE_H
 
